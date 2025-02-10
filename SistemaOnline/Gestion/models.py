@@ -23,7 +23,7 @@ class Empleados(models.Model):
 class Departamento(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField()
-    empleados = models.ManyToManyField(Empleados, related_name='departamentos')  # 🔹 Relación agregada
+    empleados = models.ManyToManyField(Empleados, related_name='departamentos') 
 
     class Meta:
         verbose_name = 'Departamento'

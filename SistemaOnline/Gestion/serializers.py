@@ -7,7 +7,7 @@ class EmpleadoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class DepartamentoSerializer(serializers.ModelSerializer):
-    empleados = serializers.PrimaryKeyRelatedField(queryset=Empleados.objects.all(), many=True)  # 🔹 Relación corregida
+    empleados = serializers.PrimaryKeyRelatedField(queryset=Empleados.objects.all(), many=True) 
 
     class Meta:
         model = Departamento
